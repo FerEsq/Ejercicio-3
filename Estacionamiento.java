@@ -107,6 +107,10 @@ public class Estacionamiento
         }
     }
 
+    
+    /** 
+     * @param v
+     */
     public void ingresarVehiculo(Vehiculo v) //ingresar vehículo al parqueo
     {
         int i = 0;
@@ -140,6 +144,10 @@ public class Estacionamiento
         }
     }
 
+    
+    /** 
+     * @param p
+     */
     public void retirarVehiculo(String p) //retirar el vehículo del parqueo
     {
         int i = 0;
@@ -178,6 +186,10 @@ public class Estacionamiento
         }
     }
 
+    
+    /** 
+     * @return Double
+     */
     public Double getPromedio() //calcular estadistica del promedio
     {
         Double suma = 0.0;
@@ -192,23 +204,39 @@ public class Estacionamiento
         return prom;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getLleno() //obtener estadpistica cuantos carros se rechazam
     {
         leerArchivo();
         return lleno;
     }
 
+    
+    /** 
+     * @return ArrayList
+     */
     public ArrayList getParqueos() //obtener arraylist con parqueos
     {
         leerArchivo();
         return parqueos;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getUtilizado() //obtener parqueo más utilizado
     {
-        return 1;
+        return parqueos.size() - 4;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getCaracteristica() //obtener tamaño del parqueo más usado
     {
         return parqueos.get(0).getTamano();

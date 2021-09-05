@@ -26,21 +26,37 @@ public class Vehiculo
         horas = h;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getPlaca() //obtener placa
     {
         return placa;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getMarca() //obtener marca
     {
         return marca;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getModelo() //obtener modelo
     {
         return modelo;
     }   
 
+    
+    /** 
+     * @return int
+     */
     public int getHoras() //obtener horas que estuvo el carro en el parqueo
     {
         return horas;

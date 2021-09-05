@@ -28,6 +28,10 @@ public class VistaF
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     }
     
+    
+    /** 
+     * @return int
+     */
     //Menu
     public int mostrarMenu()
     {
@@ -42,29 +46,52 @@ public class VistaF
         return op;
     }
 
+    
+    /** 
+     * @return int
+     */
     // ------------------------------ Solicitar datos ------------------------------
     public int pedirHoras() 
     {
         System.out.println("\nIngrese las horas que ha estado el vehículo en el parqueo:");
         return scan.nextInt();
     }
+    
+    /** 
+     * @return String
+     */
     public String pedirPlaca()
     {
         System.out.println("\nIngrese la placa del vehículo:");
         scan.nextLine();
         return scan.nextLine();
     }
+    
+    /** 
+     * @return String
+     */
     public String pedirMarca()
     {
         System.out.println("\nIngrese la marca del vehículo:");
         return scan.nextLine();
     }
+    
+    /** 
+     * @return int
+     */
     public int pedirModelo()
     {
         System.out.println("\nIngrese el modelo del vehículo:");
         return scan.nextInt();
     }
 
+    
+    /** 
+     * @param p
+     * @param m
+     * @param r
+     * @param c
+     */
     //Mostrar las estadísticas
     public void mostrarStats(Double p, int m, int r, String c)
     {

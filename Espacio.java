@@ -26,21 +26,37 @@ public class Espacio
         carro = null;        
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getTamano() //obtener tamaño
     {
         return tamano;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean getTechado() //obtener si es techado o no
     {
         return techado;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean getAereo() //obtener si es aereo o no
     {
         return aereo;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getContador() //obtener el contador de cuantas veces se ha usado
     {
         return contador;
@@ -51,6 +67,10 @@ public class Espacio
         contador++;
     }
 
+    
+    /** 
+     * @param c
+     */
     public void setCarro(Vehiculo c) //se crea un carro (ingresa al parqueo)
     {
         carro = c;
@@ -61,6 +81,10 @@ public class Espacio
         carro = null;
     }
 
+    
+    /** 
+     * @return Vehiculo
+     */
     public Vehiculo getCarro() //obtener carro 
     {
         return carro;

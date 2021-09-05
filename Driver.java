@@ -62,6 +62,7 @@ class Driver
 			}
 
 			if (opcion == 4) //salir
+			
 			{
 				est.escribirArchivo();
 				vista.mostrarDespedida();
