@@ -16,6 +16,7 @@ public class Vehiculo
 
     private int horas;
    
+    //Constructor
     public Vehiculo(String p, String ma, int mo, int h) //el usuario ingresa una nueva familia
     {
         placa = p;
@@ -25,22 +26,22 @@ public class Vehiculo
         horas = h;
     }
 
-    public String getPlaca()
+    public String getPlaca() //obtener placa
     {
         return placa;
     }
 
-    public String getMarca()
+    public String getMarca() //obtener marca
     {
         return marca;
     }
 
-    public int getModelo()
+    public int getModelo() //obtener modelo
     {
         return modelo;
     }   
 
-    public int getHoras()
+    public int getHoras() //obtener horas que estuvo el carro en el parqueo
     {
         return horas;
     }

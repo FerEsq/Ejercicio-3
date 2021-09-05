@@ -16,6 +16,7 @@ public class Espacio
 
     private Vehiculo carro; 
    
+    //Constructor
     public Espacio(String ta, boolean te, boolean a, int c) //el usuario ingresa un nuevo espacio
     {
         tamano = ta;
@@ -25,50 +26,42 @@ public class Espacio
         carro = null;        
     }
 
-    /*public Espacio() //constructor sin ingreso
-    {
-        tamano = "si";
-        techado = false;
-        aereo = false;
-        contador = 1;
-    }*/
-
-    public String getTamano()
+    public String getTamano() //obtener tamaño
     {
         return tamano;
     }
 
-    public boolean getTechado()
+    public boolean getTechado() //obtener si es techado o no
     {
         return techado;
     }
 
-    public boolean getAereo()
+    public boolean getAereo() //obtener si es aereo o no
     {
         return aereo;
     }
 
-    public int getContador()
+    public int getContador() //obtener el contador de cuantas veces se ha usado
     {
         return contador;
     }
 
-    public void setContador()
+    public void setContador() //se le suma uno al contador
     {
         contador++;
     }
 
-    public void setCarro(Vehiculo c)
+    public void setCarro(Vehiculo c) //se crea un carro (ingresa al parqueo)
     {
         carro = c;
     }
 
-    public void setNull()
+    public void setNull() //se elimina un carro (sale del parqueo)
     {
         carro = null;
     }
 
-    public Vehiculo getCarro()
+    public Vehiculo getCarro() //obtener carro 
     {
         return carro;
     }

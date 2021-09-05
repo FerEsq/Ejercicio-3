@@ -30,7 +30,8 @@ class Driver
 
 		int opcion = 0;
 
-		//Mensajes de bienvenida		
+		//Mensajes de bienvenida	
+		vista.mostrarInicio();	
 				
 		while (opcion != 4)
 		{
@@ -55,15 +56,15 @@ class Driver
 				
 			}
 
-			if (opcion == 3)
+			if (opcion == 3) //mostrar estadísticas
 			{
 				vista.mostrarStats(est.getPromedio(), est.getUtilizado(), est.getLleno(), est.getCaracteristica());
 			}
 
-			if (opcion == 4)
+			if (opcion == 4) //salir
 			{
 				est.escribirArchivo();
-				vista.despedida();
+				vista.mostrarDespedida();
 			}
 
 			//Otra ocpión

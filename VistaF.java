@@ -1,4 +1,4 @@
-/* Nombre: Vista.java
+/* Nombre: VistaF.java
  * Programador: Fernanda Esquivel (esq21542@uvg.edu.gt).
  * Lenguaje: Java
  * Recursos: Visual Studio Code
@@ -10,24 +10,22 @@ import java.util.Scanner;
 
 public class VistaF 
 {
+    //Propiedades
     Scanner scan = new Scanner(System.in);
-    /*Estacionamiento est = new Estacionamiento();
-    ArrayList <Espacio> par = est.getParqueos();*/
 
     public VistaF() //constructor
     {  
 
     }
 
-    //Mensajes de bienvenida
+    //Mensaje de bienvenida
     public void mostrarInicio()
     {
-        System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-		System.out.println("   ✦ Bienvenid@ a la base de datos del Estacionamiento ✦ \n");
+        System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("      ✦ Bienvenid@ a la base de datos del Estacionamiento ✦ \n");
 		System.out.println(" - Por el momento, solo contamos con 5 espacios de parqueo");
         System.out.println(" - Estamos trabajando para expandirnos, gracias por su comprensión");
-        System.out.println(" - Si es necesario, porfavor darle doble enter al ingresar un dato");
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     }
     
     //Menu
@@ -44,8 +42,8 @@ public class VistaF
         return op;
     }
 
-    //Ingresar Vehículo
-    public int pedirHoras()
+    // ------------------------------ Solicitar datos ------------------------------
+    public int pedirHoras() 
     {
         System.out.println("\nIngrese las horas que ha estado el vehículo en el parqueo:");
         return scan.nextInt();
@@ -67,17 +65,19 @@ public class VistaF
         return scan.nextInt();
     }
 
+    //Mostrar las estadísticas
     public void mostrarStats(Double p, int m, int r, String c)
     {
         System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println(" * El promedio de tiempo de uso del parqueo es de: " + p + " horas");
         System.out.println(" * El parqueo que más se utiliza es el número: " + m);
         System.out.println(" * Cuando el parqueo está lleno, se rechazan: " + r + " vehículos");
-        System.out.println(" * Los parqueos más utilizado son de tamaño: " + c);
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println(" * Los parqueos más utilizados son de tamaño: " + c);
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     }
 
-    public void despedida()
+    //Mensaje de despedida
+    public void mostrarDespedida()
     {
         System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("Muchas gracias por utilizar nuestro sistema!!!");
