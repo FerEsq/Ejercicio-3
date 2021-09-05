@@ -53,9 +53,19 @@ public class Espacio
         return contador;
     }
 
+    public void setContador()
+    {
+        contador++;
+    }
+
     public void setCarro(Vehiculo c)
     {
         carro = c;
+    }
+
+    public void setNull()
+    {
+        carro = null;
     }
 
     public Vehiculo getCarro()

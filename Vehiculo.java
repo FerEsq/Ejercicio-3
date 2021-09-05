@@ -14,17 +14,15 @@ public class Vehiculo
     private String marca;
     private int modelo;
 
-    private int horaEntrada;
-    private int horaSalida;
+    private int horas;
    
-    public Vehiculo(String p, String ma, int mo, int e, int s) //el usuario ingresa una nueva familia
+    public Vehiculo(String p, String ma, int mo, int h) //el usuario ingresa una nueva familia
     {
         placa = p;
         marca = ma;
         modelo = mo;
 
-        horaEntrada = e;
-        horaSalida = s;
+        horas = h;
     }
 
     public String getPlaca()
@@ -42,15 +40,9 @@ public class Vehiculo
         return modelo;
     }   
 
-    public String getEntrada()
+    public int getHoras()
     {
-        return horaEntrada;
+        return horas;
     }
-
-    public String getSalida()
-    {
-        return horaSalida;
-    }
-
 
 }

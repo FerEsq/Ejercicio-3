@@ -23,16 +23,16 @@ class Driver
 	public static void main(String[] args)
 	{
 		//Espacio parqueo = new Espacio();
+		Vista vista = new Vista();
+		Scanner scan = new Scanner(System.in);
 		Estacionamiento est = new Estacionamiento();
 		ArrayList <Espacio> ps = est.getParqueos();
 
-		//Mensajes de bienvenida
+		int opcion = 0;
 
-		String prueba = ps.get(1).getCarro().getMarca();
-
-		System.out.println("" + prueba);
+		//Mensajes de bienvenida		
 				
-		/*while (opcion != 4)
+		while (opcion != 4)
 		{
 			//Menú		
 			opcion = vista.mostrarMenu();
@@ -57,6 +57,6 @@ class Driver
 			{
 				System.out.println("Esa opción no existe, intente de nuevo\n");
 			}
-		}*/
+		}
 	}
 }
