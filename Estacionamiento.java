@@ -97,7 +97,7 @@ public class Estacionamiento
         } 
         catch (FileNotFoundException e) 
         {
-            System.out.println("An error occurred.");
+            System.out.println("Error");
             e.printStackTrace();
         }
     }
@@ -113,12 +113,17 @@ public class Estacionamiento
                 parqueos.get(i).setCarro(v);
                 parqueos.get(i).setContador();
                 bandera = true;
+                System.out.println("\n~~~~~~~~~~~~~");
+                System.out.println("Bienvenido :)");
+                System.out.println("~~~~~~~~~~~~~");
             }
             else
             {
                 if (i == 4)
                 {
+                    System.out.println("\n~~~~~~~~~~~~~~~~~~~~~");
                     System.out.println("El parqueo esta lleno");
+                    System.out.println("~~~~~~~~~~~~~~~~~~~~~");
                     lleno += 1;
                     bandera = true;
                 }
@@ -142,16 +147,28 @@ public class Estacionamiento
                 {
                     parqueos.get(i).setNull();
                     bandera = true;
+                    System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~");
+                    System.out.println("Tenga un buen viaje :)");
+                    System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
                 }
                 else
                 {
-                    i++;
+                    if (i == 4)
+                    {
+                        System.out.println("\n~~~~~~~~~~~~~~~~~~~~~");
+                        System.out.println("El vehículo no existe");
+                        System.out.println("~~~~~~~~~~~~~~~~~~~~~");
+                        bandera = true;
+                    }
+                    else
+                    {
+                        i++;
+                    }
                 }
             }
             else
             {
-                System.out.println("El vehículo no existe");
-                bandera = true;
+                i++;
             }
         }
     }
@@ -180,6 +197,16 @@ public class Estacionamiento
     {
         leerArchivo();
         return parqueos;
+    }
+
+    public int getUtilizado()
+    {
+        return 1;
+    }
+
+    public String getCaracteristica()
+    {
+        return "estandar";
     }
 
     public void escribirArchivo()

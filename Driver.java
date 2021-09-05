@@ -23,7 +23,7 @@ class Driver
 	public static void main(String[] args)
 	{
 		//Espacio parqueo = new Espacio();
-		Vista vista = new Vista();
+		VistaF vista = new VistaF();
 		Scanner scan = new Scanner(System.in);
 		Estacionamiento est = new Estacionamiento();
 		ArrayList <Espacio> ps = est.getParqueos();
@@ -37,25 +37,41 @@ class Driver
 			//Menú		
 			opcion = vista.mostrarMenu();
 
-			if (opcion == 1)
+			if (opcion == 1) //ingresar vehículo
 			{
+				int h = vista.pedirHoras();
+				String p = vista.pedirPlaca();
+				String ma = vista.pedirMarca();
+				int mo = vista.pedirModelo();
+				Vehiculo v = new Vehiculo(p, ma, mo, h);
+				est.ingresarVehiculo(v);
 				
 			}
 
-			if (opcion == 2)
+			if (opcion == 2) //retirar vehículo
 			{
+				String p1 = vista.pedirPlaca();
+				est.retirarVehiculo(p1);
 				
 			}
 
 			if (opcion == 3)
 			{
-				
+				vista.mostrarStats(est.getPromedio(), est.getUtilizado(), est.getLleno(), est.getCaracteristica());
+			}
+
+			if (opcion == 4)
+			{
+				est.escribirArchivo();
+				vista.despedida();
 			}
 
 			//Otra ocpión
-			else
+			if (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4)
 			{
-				System.out.println("Esa opción no existe, intente de nuevo\n");
+				System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+				System.out.println("Esa opción no existe, intente de nuevo");
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 			}
 		}
 	}

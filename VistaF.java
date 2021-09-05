@@ -8,24 +8,24 @@
 //Import
 import java.util.Scanner;
 
-public class Vista 
+public class VistaF 
 {
     Scanner scan = new Scanner(System.in);
     /*Estacionamiento est = new Estacionamiento();
     ArrayList <Espacio> par = est.getParqueos();*/
 
-    public Vista() //constructor
+    public VistaF() //constructor
     {  
 
     }
 
     //Mensajes de bienvenida
-    public void mostrarInicio();
+    public void mostrarInicio()
     {
         System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.println("   ✦ Bienvenid@ a la base de datos del Estacionamiento ✦ \n");
-		System.out.println(" - Por el momento, solo contamos con 5 espacios de parqueo";
-        System.out.println(" - Estamos trabajando para expandirnos, gracias por su comprensión":
+		System.out.println(" - Por el momento, solo contamos con 5 espacios de parqueo");
+        System.out.println(" - Estamos trabajando para expandirnos, gracias por su comprensión");
         System.out.println(" - Si es necesario, porfavor darle doble enter al ingresar un dato");
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     }
@@ -59,7 +59,6 @@ public class Vista
     public String pedirMarca()
     {
         System.out.println("\nIngrese la marca del vehículo:");
-        scan.nextLine();
         return scan.nextLine();
     }
     public int pedirModelo()
@@ -72,9 +71,9 @@ public class Vista
     {
         System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println(" * El promedio de tiempo de uso del parqueo es de: " + p + " horas");
-        System.out.println(" * El parqueo que más se utiliza es el número: " + m + " horas");
+        System.out.println(" * El parqueo que más se utiliza es el número: " + m);
         System.out.println(" * Cuando el parqueo está lleno, se rechazan: " + r + " vehículos");
-        System.out.println(" * Los parqueos más utilizado son de tamaño: " + p);
+        System.out.println(" * Los parqueos más utilizado son de tamaño: " + c);
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
 
@@ -86,3 +85,4 @@ public class Vista
     }
     
 }
+
