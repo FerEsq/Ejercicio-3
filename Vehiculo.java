@@ -17,7 +17,7 @@ public class Vehiculo
     private int horas;
    
     //Constructor
-    public Vehiculo(String p, String ma, int mo, int h) //el usuario ingresa una nueva familia
+    public Vehiculo(String p, String ma, int mo, int h) //el usuario ingresa un nuevo vehículo
     {
         placa = p;
         marca = ma;
