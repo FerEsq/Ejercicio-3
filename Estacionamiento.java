@@ -276,7 +276,7 @@ public class Estacionamiento
         } 
         catch (IOException e) 
         {
-            System.out.println("An error occurred.");
+            System.out.println("Error.");
             e.printStackTrace();
         }
     }
